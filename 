@@ -1,0 +1,30 @@
+import numpy as np
+
+
+col1 = []
+col2 = []
+col3 = []
+col4 = []
+col5 = []
+col6 = []
+col7 = []
+col8 = []
+
+with open(cwd + "SoccerData.txt", 'r') as data:
+    for line in data:
+        first, second, third, fourth, fifth, sixth, seventh, eighth = line.split()
+        col1.append(first)
+        col2.append(second)
+        col3.append(third)
+        col4.append(fourth)
+        col5.append(fifth)
+        col6.append(sixth)
+        col7.append(seventh)
+        col8.append(eighth)
+        input_layer = np.vstack((col1, col2, col3, col4, col5, col6)).T
+        ground_truth = np.vstack((col7,col8)).T
+
+print(self.input_layer)
+print(self.ground_truth)
+
+
