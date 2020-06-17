@@ -20,7 +20,7 @@ network = Network("Test1",layers, 0.01)
 network.load()
 print(network.loss(network.feed_forward(data.to_numpy()),ground_truth.to_numpy()))
 
-# network.train(data.to_numpy(), ground_truth.to_numpy(), 5000)
+network.train(data.to_numpy(), ground_truth.to_numpy(), 5000)
 
 
 
